@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_bb3f1a6ef74048ac8486db7ea81ea249 {
+                #map_d446c5135928b0bb026cee72ba188d3b {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,7 +39,7 @@
 <body>
     
     
-            <div class="folium-map" id="map_bb3f1a6ef74048ac8486db7ea81ea249" ></div>
+            <div class="folium-map" id="map_d446c5135928b0bb026cee72ba188d3b" ></div>
         
     
 <!doctype html>
@@ -65,18 +65,26 @@
 </head>
 <body>
 <div class="button">
-  <button onclick="document.getElementById('iframe-map').src='heatmap1.html'">網路熱度</button>
-  <button onclick="document.getElementById('iframe-map').src='heatmap2.html'">景點數</button>
+  <button onclick="changeMap('heatmap1.html')">網路熱度</button>
+  <button onclick="changeMap('heatmap2.html')">景點數</button>
 </div>
 <iframe id="iframe-map" src="heatmap1.html" style="width:100%; height:100%; border:none;"></iframe>
+
+<script>
+  function changeMap(mapName) {
+    var iframe = document.getElementById('iframe-map');
+    iframe.src = mapName;
+    console.log('Map changed to: ' + iframe.src);
+  }
+</script>
 </body>
 </html>
 </body>
 <script>
     
     
-            var map_bb3f1a6ef74048ac8486db7ea81ea249 = L.map(
-                "map_bb3f1a6ef74048ac8486db7ea81ea249",
+            var map_d446c5135928b0bb026cee72ba188d3b = L.map(
+                "map_d446c5135928b0bb026cee72ba188d3b",
                 {
                     center: [23.5, 121.0],
                     crs: L.CRS.EPSG3857,
@@ -90,10 +98,10 @@
 
         
     
-            var tile_layer_23e62a4d17dcc81c80463649051d2540 = L.tileLayer(
+            var tile_layer_7c2e0f2fbe4fdb4153a1d443ad57976d = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_bb3f1a6ef74048ac8486db7ea81ea249);
+            ).addTo(map_d446c5135928b0bb026cee72ba188d3b);
         
 </script>
 </html>
